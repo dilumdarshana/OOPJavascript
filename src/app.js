@@ -1,8 +1,8 @@
-import {Human} from './classes/human.js';
-import {Bird} from './classes/bird.js';
+import {Drone} from './classes/drone.js';
+import {Car} from './classes/car.js';
 
-let human1 = new Human('Apache', 34);
-let human2 = new Human('Tom', 35);
+let human1 = new Drone('Apache', 34, 1000);
+let human2 = new Drone('Tom', 35, 1001);
 
-console.log(human1);
-console.log(human2); 
+console.log(human1.id);
+console.log(human2);
