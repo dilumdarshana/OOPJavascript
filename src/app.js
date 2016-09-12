@@ -1,8 +1,18 @@
 import {Drone} from './classes/drone.js';
 import {Car} from './classes/car.js';
+import {DataService} from './services/dataService.js';
+import {data} from './data.js';
 
-let human1 = new Drone('Apache', 34, 1000);
-let human2 = new Drone('Tom', 35, 1001);
 
-console.log(human1.id);
-console.log(human2);
+let dataServiceObj = new DataService ();
+
+dataServiceObj.loadData(data);
+
+// get car by license
+let car = dataServiceObj.getCarByLicense('AD1202');
+
+console.log(car);
+
+for (let err of dataServiceObj.errors) {
+    console.log (err.message);
+}
